@@ -12,11 +12,16 @@ const Homepage: React.FC = () => {
 
   return (
     <div>
-      <h1 className="title pt-10">EuFMD Milestones</h1>
-      <div className="relative h-screen mx-auto">
+      {/* <h1 className="title pt-10">EuFMD Milestones</h1> */}
+      <div className="mx-auto">
         {/* Circle setup for focus areas */}
-        <div className="absolute inset-0 flex items-center justify-center p-10">
-          <div className="container relative min-w-[600px] max-w-[600px] h-[600px] rounded-full bg-white overflow-hidden flex items-center justify-center border-2 border-white">
+        <div className="absolute inset-0 flex items-center justify-center p-4">
+          <div className="container relative flex items-center justify-center rounded-full bg-white overflow-hidden border-2 border-white 
+          min-w-[400px] min-h-[400px] 
+          sm:max-w-[400px] sm:max-h-[400px]
+          md:max-w-[500px] md:max-h-[500px]
+          lg:max-w-[550px] lg:max-h-[550px]
+          w-full max-h-[90vh] aspect-square">
             <div
               id="focusThree"
               className="polypieceInner absolute w-full h-full focus-three hover:bg-teal-800"
@@ -49,7 +54,9 @@ const Homepage: React.FC = () => {
         {/* SVG set up and text/line inserts that overlay the circle */}
         <svg
           className="absolute inset-0 w-full h-full pointer-events-none"
-          viewBox="0 0 700 700"
+          width="100%"   // sets the SVG to fill the container's width
+          height="100%"  // sets the SVG to fill the container's height
+          viewBox="0 0 600 600"
           preserveAspectRatio="xMidYMid meet"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -58,7 +65,7 @@ const Homepage: React.FC = () => {
             y="38%"
             dominantBaseline="middle"
             textAnchor="middle"
-            className="text-3xl fill-white"
+            className="fill-white text-2xl sm:text-lg md:text-xl lg:text-2xl"
           >
             Protection of Livestock
           </text>
@@ -67,7 +74,7 @@ const Homepage: React.FC = () => {
             y="38%"
             dominantBaseline="middle"
             textAnchor="middle"
-            className="text-3xl fill-white"
+            className="fill-white text-2xl sm:text-lg md:text-xl lg:text-2xl"
           >
             Respond to Crises
           </text>
@@ -76,7 +83,7 @@ const Homepage: React.FC = () => {
             y="73%"
             dominantBaseline="middle"
             textAnchor="middle"
-            className="text-3xl fill-white"
+            className="fill-white text-2xl sm:text-lg md:text-xl lg:text-2xl"
           >
             Control of Diseases
           </text>

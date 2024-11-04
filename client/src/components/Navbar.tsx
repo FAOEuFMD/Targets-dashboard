@@ -17,6 +17,8 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
       </div>
+      
+
     </nav>
   );
 };
